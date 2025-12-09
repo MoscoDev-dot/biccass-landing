@@ -2,11 +2,16 @@ import React from "react";
 import { TextField, Button, Avatar } from "@mui/material";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import Image from "next/image";
+import { FadeIn } from "./Animations";
 
 const FooterSection = () => {
   return (
     <footer className="bg-[#161C28] md:px-20 px-4 text-white pt-20 pb-10">
-      <div className=" mx-auto   grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+      <FadeIn
+        direction="up"
+        duration={0.8}
+        className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20"
+      >
         {/* Left: Testimonials */}
         <div className="space-y-8">
           <h2 className="text-[20px] md:text-[50px] font-semibold leading-[100%] ">
@@ -25,8 +30,8 @@ const FooterSection = () => {
               height={100}
             />
             <p className="text-[#A6A6A6] text-[12px] md:text-[18px] mb-4">
-              "I am very helped by this E-wallet application , my days are very
-              easy to use this application and its very helpful."
+              &quot;I am very helped by this E-wallet application , my days are
+              very easy to use this application and its very helpful.&quot;
             </p>
             <p className="text-[#A6A6A6] text-[12px] md:text-[18px] font-bold">
               _ Aria Zinanrio
@@ -138,7 +143,7 @@ const FooterSection = () => {
             or <span className="text-white">Start Free Trial</span>
           </p>
         </div>
-      </div>
+      </FadeIn>
 
       {/* Footer Links */}
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8 border-t border-gray-800 pt-10">

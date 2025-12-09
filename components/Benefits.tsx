@@ -1,13 +1,14 @@
 import React from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Image from "next/image";
+import { FadeIn } from "./Animations";
 
 const Benefits = () => {
   return (
     <section className="py-20  mx-auto bg-gradient-to-r from-[#FFD6D6]/30 to-[#54BE96]/10 md:px-20 px-4  grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div className="space-y-8">
+      <FadeIn direction="right" duration={0.8} className="space-y-8">
         <h2 className="text-[20px] md:text-[50px] font-bold text-brand-dark">
-          What Benefit Will  You Get
+          What Benefit Will You Get
         </h2>
 
         <ul className="space-y-6">
@@ -24,9 +25,9 @@ const Benefits = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </FadeIn>
       {/* image side */}
-      <div className="relative">
+      <FadeIn direction="left" duration={0.8} delay={0.2} className="relative">
         {/* Placeholder for the guy with green bg */}
         <div className="bg-brand-DEFAULT/10 rounded-tr-[100px] rounded-bl-[50px] p-4 relative z-0 min-h-[400px] flex items-center justify-center">
           <div className="absolute md:top-20 top-40 -right-5 bg-white md:p-4 p-2 rounded-xl shadow-lg z-10 flex items-center gap-3">
@@ -101,7 +102,7 @@ const Benefits = () => {
             </div>
           </div>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 };

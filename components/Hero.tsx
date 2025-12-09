@@ -2,15 +2,20 @@ import React from "react";
 import { Button, TextField, InputAdornment } from "@mui/material";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import Image from "next/image";
+import { FadeIn } from "./Animations";
 
 const Hero = () => {
   return (
     <section className="pt-10 pb-20 md:px-20 px-4   mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       {/* Left Text */}
-      <div className="space-y-6">
+      <FadeIn
+        direction="right"
+        duration={0.8}
+        delay={0.2}
+        className="space-y-6"
+      >
         <h1 className="text-[25px] md:text-[50px] font-bold leading-tight text-brand-dark">
-          We're here to 
-          Increase your 
+          We're here to Increase your
           <span className="">
             Productivity
             <Image
@@ -52,10 +57,10 @@ const Hero = () => {
             View Demo
           </Button>
         </div>
-      </div>
+      </FadeIn>
 
       {/* Right Image Placeholder */}
-      <div className="relative">
+      <FadeIn direction="left" duration={0.8} delay={0.4} className="relative">
         {/* Placeholder for the guy with green bg */}
         <div className="bg-brand-DEFAULT/10 rounded-tr-[100px] rounded-bl-[50px] p-4 relative z-0 min-h-[400px] flex items-center justify-center">
           <div className="absolute top-10 md:right-17 right-0   z-10">
@@ -63,8 +68,8 @@ const Hero = () => {
           </div>
           {/* man image */}
           <Image
-          width={350}
-          height={350}
+            width={350}
+            height={350}
             src="/Frame 46.png"
             alt="Dashboard User"
             className="relative z-0 rounded-xl shadow-2xl w-[300px] md:w-[400px] md:max-w-md"
@@ -100,14 +105,20 @@ const Hero = () => {
           </div>
           {/* debitcard */}
           <div className="absolute bottom-10 -right-0  z-10 ">
-            <Image src="/Frame 45.png" alt="Quote" width={150} height={200} className="w-[100px] md:w-[200px] " />
+            <Image
+              src="/Frame 45.png"
+              alt="Quote"
+              width={150}
+              height={200}
+              className="w-[100px] md:w-[200px] "
+            />
           </div>
           {/* last redishpink image */}
           <div className="absolute bottom-0 md:ms-70  z-10 ">
             <Image src="/Group 48.png" alt="Quote" width={50} height={50} />
           </div>
         </div>
-      </div>
+      </FadeIn>
 
       {/* Partners Logos */}
       <div className="col-span-1 lg:col-span-2 mt-16">
